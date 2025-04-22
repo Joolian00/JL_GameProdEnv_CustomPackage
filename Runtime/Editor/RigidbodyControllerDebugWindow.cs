@@ -1,12 +1,12 @@
 using System.Collections.Generic;
 
+using JL_GameProdEnv_CustomPackage.Runtime.RBController;
+
 using UnityEditor;
 
 using UnityEngine;
 
-using JL_GameProdEnv_CustomPackage.Runtime.RBController;
-
-namespace JL_GameProdEnv_CustomPackage.Runtime.RBController.Editor
+namespace JL_GameProdEnv_CustomPackage.Runtime.Editor
 {
     public class RigidbodyControllerDebugWindow : EditorWindow
     {

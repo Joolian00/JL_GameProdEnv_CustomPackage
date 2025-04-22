@@ -1,10 +1,10 @@
-﻿using UnityEditor;
+﻿using JL_GameProdEnv_CustomPackage.Runtime.RBController;
+
+using UnityEditor;
 
 using UnityEngine;
 
-using JL_GameProdEnv_CustomPackage.Runtime.RBController;
-
-namespace JL_GameProdEnv_CustomPackage.Runtime.RBController.Editor
+namespace JL_GameProdEnv_CustomPackage.Runtime.Editor
 {
     [CustomEditor(typeof(RigidbodyController))]
     public class RigidbodyControllerEditor : UnityEditor.Editor
