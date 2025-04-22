@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "displayName": "Custom Rigidbody Controller",
     "description": "Custom Package for JL GameProdEnv including a 3D Rigidbody Controller",
-    "unity": "6000.0.44f1",
+    "unity": "6000.0",
     "author": {
         "name": "Julian Leidolt",
         "email": "julian@leidolt.dev",
