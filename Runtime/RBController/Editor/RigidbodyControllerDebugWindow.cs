@@ -4,6 +4,8 @@ using UnityEditor;
 
 using UnityEngine;
 
+using JL_GameProdEnv_CustomPackage.Runtime.RBController;
+
 namespace JL_GameProdEnv_CustomPackage.Runtime.RBController.Editor
 {
     public class RigidbodyControllerDebugWindow : EditorWindow
