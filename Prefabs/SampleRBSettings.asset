@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e59d1c6df54f44cf8e5d676bbc0f4375, type: 3}
+  m_Name: SampleRBSettings
+  m_EditorClassIdentifier: 
+  physics:
+    gravityStrength: 9.81
+  groundChecker:
+    groundCheckRadiusMultiplier: 0.9
+    groundCheckDistanceTolerance: 0.05
+    groundLayer:
+      serializedVersion: 2
+      m_Bits: 1
+    maxGroundCheckDistance: 3
+  heightSpring:
+    groundLayer:
+      serializedVersion: 2
+      m_Bits: 1
+    raycastDistance: 3
+    rideHeight: 2
+    springStrength: 50
+    springDamping: 5
+    uprightJointTargetRot: {x: 0, y: 0, z: 0, w: 1}
+    uprightJointSpringStrength: 500
+    uprightJointSpringDamper: 5
+  movement:
+    maxSpeed: 10
+    maxAccelForce: 150
+    frictionCoefficient: 10
+    staticFrictionThreshold: 0.1
+    jumpUpVelocity: 9
+    jumpUpVelocityFactorFromExistingY:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    analogJumpUpForce:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    jumpTerminalVelocity: 22.5
+    jumpDuration: 0.6667
+    jumpFallFactor: 1.25
+  camera:
+    lookTargetOffset: {x: 2.22, y: 0.6, z: 0}
+    positionTargetOffset: {x: 2, y: 1.25, z: -3}
+    useSmoothing: 1
+    smoothingTime: 0.05
+    maxSmoothSpeed: 20
+    horizontalSensitivity: 1
+    verticalSensitivity: 4
+  shooting:
+    shootForce: 30
+    shootCooldown: 0.5
+    projectilePrefab: {fileID: 3505093526132660784, guid: cd492650e072c684795e120e007e1c7f, type: 3}
