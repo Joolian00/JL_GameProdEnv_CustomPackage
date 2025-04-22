@@ -1,7 +1,5 @@
 ﻿using JL_GameProdEnv_CustomPackage.Runtime.RBController.ScriptableObjects;
 
-using Julian;
-
 using UnityEngine;
 
 namespace JL_GameProdEnv_CustomPackage.Runtime.RBController.Components
