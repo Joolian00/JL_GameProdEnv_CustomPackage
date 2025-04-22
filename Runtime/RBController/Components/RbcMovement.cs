@@ -1,9 +1,8 @@
-using System;
+using JL_GameProdEnv_CustomPackage.Runtime.RBController.ScriptableObjects;
 
 using UnityEngine;
-using Julian.RBController.ScriptableObjects;
 
-namespace Julian.RBController.Components
+namespace JL_GameProdEnv_CustomPackage.Runtime.RBController.Components
 {
     [System.Serializable]
     public class RbcMovement

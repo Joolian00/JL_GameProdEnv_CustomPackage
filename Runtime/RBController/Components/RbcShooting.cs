@@ -1,7 +1,8 @@
-﻿using UnityEngine;
-using Julian.RBController.ScriptableObjects;
+﻿using JL_GameProdEnv_CustomPackage.Runtime.RBController.ScriptableObjects;
 
-namespace Julian.RBController.Components
+using UnityEngine;
+
+namespace JL_GameProdEnv_CustomPackage.Runtime.RBController.Components
 {
     [System.Serializable]
     public class RbcShooting

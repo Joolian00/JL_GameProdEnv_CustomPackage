@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Julian.RBController
+namespace JL_GameProdEnv_CustomPackage.Runtime.RBController
 {
     public class CameraPlayerFollow : MonoBehaviour
     {

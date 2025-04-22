@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Julian.RBController
+namespace JL_GameProdEnv_CustomPackage.Runtime.RBController.Components
 {
     public class InputHandler
     {

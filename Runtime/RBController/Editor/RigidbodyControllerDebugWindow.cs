@@ -1,9 +1,10 @@
-using UnityEngine;
-using UnityEditor;
 using System.Collections.Generic;
-using Julian.RBController.Components;
 
-namespace Julian.RBController.Editor
+using UnityEditor;
+
+using UnityEngine;
+
+namespace JL_GameProdEnv_CustomPackage.Runtime.RBController.Editor
 {
     public class RigidbodyControllerDebugWindow : EditorWindow
     {

@@ -1,8 +1,8 @@
-﻿using UnityEngine;
-using UnityEditor;
+﻿using UnityEditor;
 
+using UnityEngine;
 
-namespace Julian.RBController.Editor
+namespace JL_GameProdEnv_CustomPackage.Runtime.RBController.Editor
 {
     [CustomEditor(typeof(RigidbodyController))]
     public class RigidbodyControllerEditor : UnityEditor.Editor

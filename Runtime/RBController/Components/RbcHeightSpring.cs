@@ -1,8 +1,10 @@
-﻿using Julian.RBController.ScriptableObjects;
+﻿using JL_GameProdEnv_CustomPackage.Runtime.RBController.ScriptableObjects;
+
+using Julian;
 
 using UnityEngine;
 
-namespace Julian.RBController.Components
+namespace JL_GameProdEnv_CustomPackage.Runtime.RBController.Components
 {
     [System.Serializable]
     public class RbcHeightSpring

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Julian.RBController.ScriptableObjects
+namespace JL_GameProdEnv_CustomPackage.Runtime.RBController.ScriptableObjects
 {
     [CreateAssetMenu(fileName = "RigidbodyControllerSettings", menuName = "RBController/Settings", order = 1)]
     public class RigidbodyControllerSettings : ScriptableObject

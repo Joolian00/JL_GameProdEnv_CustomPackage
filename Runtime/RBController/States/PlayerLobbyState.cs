@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Julian.RBController.States
+namespace JL_GameProdEnv_CustomPackage.Runtime.RBController.States
 {
     public class PlayerLobbyState : PlayerBaseState
     {

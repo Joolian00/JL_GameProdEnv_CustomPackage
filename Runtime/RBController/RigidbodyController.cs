@@ -1,14 +1,13 @@
 ﻿using System.Collections;
 
-using Julian.RBController.Components;
-using Julian.RBController.ScriptableObjects;
-using Julian.RBController.States;
+using JL_GameProdEnv_CustomPackage.Runtime.RBController.Components;
+using JL_GameProdEnv_CustomPackage.Runtime.RBController.ScriptableObjects;
+using JL_GameProdEnv_CustomPackage.Runtime.RBController.States;
 
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Serialization;
 
-namespace Julian.RBController
+namespace JL_GameProdEnv_CustomPackage.Runtime.RBController
 {
     public class RigidbodyController : MonoBehaviour
     {

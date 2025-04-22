@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 
-using Julian.RBController.States;
+using JL_GameProdEnv_CustomPackage.Runtime.RBController.States;
 
 using UnityEngine;
 
-namespace Julian.RBController
+namespace JL_GameProdEnv_CustomPackage.Runtime.RBController
 {
     public enum PlayerStateType
     {

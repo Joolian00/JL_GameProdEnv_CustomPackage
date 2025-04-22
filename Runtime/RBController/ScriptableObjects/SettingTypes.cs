@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Julian.RBController.ScriptableObjects
+namespace JL_GameProdEnv_CustomPackage.Runtime.RBController.ScriptableObjects
 {
     [System.Serializable]
     public class PhysicsSettings
