@@ -11,9 +11,28 @@
 <para>Records Rigidbody transformations at configurable frequencies, with higher precision for player objects. (Though I think this is currently bugged)</para>
 <para>Provides an editor window for easy recording management and visualization of replays.</para>
 <sect1 id="index_1autotoc_md1">
-<title>Documentation</title><para><ulink url="https://github.com/Joolian00/JL_GameProdEnv_CustomPackage/tree/main/Docs/html/index.html">Documentation</ulink></para>
+<title>Documentation</title><para><ulink url="./docs/html/index.html">Doxygen Documentation</ulink></para>
 </sect1>
 <sect1 id="index_1autotoc_md2">
+<title>Key Components</title><sect2 id="index_1autotoc_md3">
+<title>Editor</title><para><itemizedlist>
+<listitem><para><bold><ulink url="./docs/html/class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window.html">ReplayToolsWindow</ulink></bold>: Editor window for managing gameplay recordings and replays.</para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+<sect2 id="index_1autotoc_md4">
+<title>Runtime</title><para><itemizedlist>
+<listitem><para><bold><ulink url="./docs/html/class_j_l___game_prod_env___custom_package_1_1_runtime_1_1_replay_recorder.html">ReplayRecorder</ulink></bold>: Handles recording of Rigidbody and Transform data.</para>
+</listitem><listitem><para><bold><ulink url="./docs/html/class_j_l___game_prod_env___custom_package_1_1_runtime_1_1_replay_player.html">ReplayPlayer</ulink></bold>: Manages playback of recorded sessions with controls for play, pause, and speed.</para>
+</listitem><listitem><para><bold><ulink url="./docs/html/class_j_l___game_prod_env___custom_package_1_1_runtime_1_1_replay_session.html">ReplaySession</ulink></bold>: Contains recorded data for various rigidbody objects during gameplay.</para>
+</listitem><listitem><para><bold><ulink url="./docs/html/class_j_l___game_prod_env___custom_package_1_1_runtime_1_1_replay_session_manager.html">ReplaySessionManager</ulink></bold>: Orchestrates persistence and management of replay sessions.</para>
+</listitem><listitem><para><bold><ulink url="./docs/html/class_j_l___game_prod_env___custom_package_1_1_runtime_1_1_rigidbody_recording_data.html">RigidbodyRecordingData</ulink></bold>: Stores transformation data for a specific Rigidbody.</para>
+</listitem><listitem><para><bold><ulink url="./docs/html/class_j_l___game_prod_env___custom_package_1_1_runtime_1_1_transform_data.html">TransformData</ulink></bold>: Represents position, rotation, velocity data at specific timestamps.</para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+</sect1>
+<sect1 id="index_1autotoc_md5">
 <title>Installation</title><para>Unity Package Manager: Click on the plus → Add from Custom Git Url</para>
 <para><programlisting><codeline><highlight class="normal">https://github.com/Joolian00/JL_GameProdEnv_CustomPackage.git</highlight></codeline>
 </programlisting> </para>
