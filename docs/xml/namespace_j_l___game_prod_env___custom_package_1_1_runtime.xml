@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="namespace_j_l___game_prod_env___custom_package_1_1_runtime" kind="namespace" language="C#">
+    <compoundname>JL_GameProdEnv_CustomPackage::Runtime</compoundname>
+    <innerclass refid="class_j_l___game_prod_env___custom_package_1_1_runtime_1_1_replay_player" prot="public">JL_GameProdEnv_CustomPackage::Runtime::ReplayPlayer</innerclass>
+    <innerclass refid="class_j_l___game_prod_env___custom_package_1_1_runtime_1_1_replay_recorder" prot="public">JL_GameProdEnv_CustomPackage::Runtime::ReplayRecorder</innerclass>
+    <innerclass refid="class_j_l___game_prod_env___custom_package_1_1_runtime_1_1_replay_session" prot="public">JL_GameProdEnv_CustomPackage::Runtime::ReplaySession</innerclass>
+    <innerclass refid="class_j_l___game_prod_env___custom_package_1_1_runtime_1_1_replay_session_manager" prot="public">JL_GameProdEnv_CustomPackage::Runtime::ReplaySessionManager</innerclass>
+    <innerclass refid="class_j_l___game_prod_env___custom_package_1_1_runtime_1_1_rigidbody_recording_data" prot="public">JL_GameProdEnv_CustomPackage::Runtime::RigidbodyRecordingData</innerclass>
+    <innerclass refid="class_j_l___game_prod_env___custom_package_1_1_runtime_1_1_transform_data" prot="public">JL_GameProdEnv_CustomPackage::Runtime::TransformData</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Runtime/ReplayPlayer.cs" line="6" column="1"/>
+  </compounddef>
+</doxygen>

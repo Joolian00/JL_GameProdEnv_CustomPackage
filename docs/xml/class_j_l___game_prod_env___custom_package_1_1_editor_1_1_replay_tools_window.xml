@@ -1,0 +1,714 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window" kind="class" language="C#" prot="public">
+    <compoundname>JL_GameProdEnv_CustomPackage::Editor::ReplayToolsWindow</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">EditorWindow</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a12495372c249548eaa781c0ddd0bfb1f" prot="private" static="no" mutable="no">
+        <type>List&lt; Rigidbody &gt;</type>
+        <definition>List&lt;Rigidbody&gt; JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.playerRigidbodies</definition>
+        <argsstring></argsstring>
+        <name>playerRigidbodies</name>
+        <qualifiedname>JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.playerRigidbodies</qualifiedname>
+        <initializer>= new List&lt;Rigidbody&gt;()</initializer>
+        <briefdescription>
+<para>List of rigidbodies associated with player-controlled objects. These are recorded at a higher frequency for better precision. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Editor/ReplayToolsWindow.cs" line="20" column="22" bodyfile="Editor/ReplayToolsWindow.cs" bodystart="20" bodyend="-1"/>
+        <referencedby refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a2037f559d6b36fbd3f063f629c0ac0b2" compoundref="_replay_tools_window_8cs" startline="211" endline="311">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.DrawRecordingSection</referencedby>
+        <referencedby refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1afcc8e6953207e24e0e996930fe374d97" compoundref="_replay_tools_window_8cs" startline="569" endline="622">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.DrawRigidbodyLists</referencedby>
+        <referencedby refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a54b19e3ade0fba6c2cdf33d610c956c7" compoundref="_replay_tools_window_8cs" startline="152" endline="170">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.RefreshRigidbodyLists</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a52e2d14a8ffb12cfed0d567f73b9c576" prot="private" static="no" mutable="no">
+        <type>List&lt; Rigidbody &gt;</type>
+        <definition>List&lt;Rigidbody&gt; JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.normalRigidbodies</definition>
+        <argsstring></argsstring>
+        <name>normalRigidbodies</name>
+        <qualifiedname>JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.normalRigidbodies</qualifiedname>
+        <initializer>= new List&lt;Rigidbody&gt;()</initializer>
+        <briefdescription>
+<para>List of regular rigidbodies in the scene that are not player-controlled. These are recorded at a lower frequency to optimize performance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Editor/ReplayToolsWindow.cs" line="26" column="22" bodyfile="Editor/ReplayToolsWindow.cs" bodystart="26" bodyend="-1"/>
+        <referencedby refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a2037f559d6b36fbd3f063f629c0ac0b2" compoundref="_replay_tools_window_8cs" startline="211" endline="311">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.DrawRecordingSection</referencedby>
+        <referencedby refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1afcc8e6953207e24e0e996930fe374d97" compoundref="_replay_tools_window_8cs" startline="569" endline="622">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.DrawRigidbodyLists</referencedby>
+        <referencedby refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a54b19e3ade0fba6c2cdf33d610c956c7" compoundref="_replay_tools_window_8cs" startline="152" endline="170">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.RefreshRigidbodyLists</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1afe6da2ad3fe9f8c9a6da0d8a8869dcdb" prot="private" static="no" mutable="no">
+        <type>Vector2</type>
+        <definition>Vector2 JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.scrollPos</definition>
+        <argsstring></argsstring>
+        <name>scrollPos</name>
+        <qualifiedname>JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.scrollPos</qualifiedname>
+        <briefdescription>
+<para>Scroll position for the main window content. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Editor/ReplayToolsWindow.cs" line="29" column="25" bodyfile="Editor/ReplayToolsWindow.cs" bodystart="29" bodyend="-1"/>
+        <referencedby refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1afcc8e6953207e24e0e996930fe374d97" compoundref="_replay_tools_window_8cs" startline="569" endline="622">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.DrawRigidbodyLists</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a2d5ccfc6fdff31b8ac9b94c3f629bd57" prot="private" static="no" mutable="no">
+        <type>Vector2</type>
+        <definition>Vector2 JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.sessionScrollPos</definition>
+        <argsstring></argsstring>
+        <name>sessionScrollPos</name>
+        <qualifiedname>JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.sessionScrollPos</qualifiedname>
+        <briefdescription>
+<para>Scroll position for the saved sessions list. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Editor/ReplayToolsWindow.cs" line="32" column="25" bodyfile="Editor/ReplayToolsWindow.cs" bodystart="32" bodyend="-1"/>
+        <referencedby refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a52444e1cf34ebda9b54a13694f360e0a" compoundref="_replay_tools_window_8cs" startline="317" endline="471">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.DrawSessionsSection</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1ab44df5a563419ccc343be00c2699db94" prot="private" static="no" mutable="no">
+        <type>Rigidbody</type>
+        <definition>Rigidbody JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.selectedRigidbody</definition>
+        <argsstring></argsstring>
+        <name>selectedRigidbody</name>
+        <qualifiedname>JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.selectedRigidbody</qualifiedname>
+        <briefdescription>
+<para>Currently selected rigidbody for detailed information display. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Editor/ReplayToolsWindow.cs" line="35" column="27" bodyfile="Editor/ReplayToolsWindow.cs" bodystart="35" bodyend="-1"/>
+        <referencedby refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a9f9937f58fbb537ab31668e2e944392b" compoundref="_replay_tools_window_8cs" startline="652" endline="695">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.DrawRigidbodyItem</referencedby>
+        <referencedby refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1ae8173a28dcc2541a6f7d0284ebe73b7d" compoundref="_replay_tools_window_8cs" startline="628" endline="645">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.DrawSelectedRigidbodyInfo</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a3971eb3ca0037b7788f5ef54d30c50a9" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.playerFoldout</definition>
+        <argsstring></argsstring>
+        <name>playerFoldout</name>
+        <qualifiedname>JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.playerFoldout</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Editor/ReplayToolsWindow.cs" line="38" column="22" bodyfile="Editor/ReplayToolsWindow.cs" bodystart="38" bodyend="-1"/>
+        <referencedby refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1afcc8e6953207e24e0e996930fe374d97" compoundref="_replay_tools_window_8cs" startline="569" endline="622">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.DrawRigidbodyLists</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a137e663d737fc7f6220158783fc13083" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.normalFoldout</definition>
+        <argsstring></argsstring>
+        <name>normalFoldout</name>
+        <qualifiedname>JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.normalFoldout</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Editor/ReplayToolsWindow.cs" line="39" column="22" bodyfile="Editor/ReplayToolsWindow.cs" bodystart="39" bodyend="-1"/>
+        <referencedby refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1afcc8e6953207e24e0e996930fe374d97" compoundref="_replay_tools_window_8cs" startline="569" endline="622">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.DrawRigidbodyLists</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a65624ffbdec64183b363eb3a9405cad5" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.recordingFoldout</definition>
+        <argsstring></argsstring>
+        <name>recordingFoldout</name>
+        <qualifiedname>JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.recordingFoldout</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Editor/ReplayToolsWindow.cs" line="40" column="22" bodyfile="Editor/ReplayToolsWindow.cs" bodystart="40" bodyend="-1"/>
+        <referencedby refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a2037f559d6b36fbd3f063f629c0ac0b2" compoundref="_replay_tools_window_8cs" startline="211" endline="311">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.DrawRecordingSection</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a91e3b9f6c67280123f5976eb2b02f46b" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.sessionsFoldout</definition>
+        <argsstring></argsstring>
+        <name>sessionsFoldout</name>
+        <qualifiedname>JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.sessionsFoldout</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Editor/ReplayToolsWindow.cs" line="41" column="22" bodyfile="Editor/ReplayToolsWindow.cs" bodystart="41" bodyend="-1"/>
+        <referencedby refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a52444e1cf34ebda9b54a13694f360e0a" compoundref="_replay_tools_window_8cs" startline="317" endline="471">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.DrawSessionsSection</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a2e591369c134db2c36be6438e0aa134a" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.replayFoldout</definition>
+        <argsstring></argsstring>
+        <name>replayFoldout</name>
+        <qualifiedname>JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.replayFoldout</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Editor/ReplayToolsWindow.cs" line="42" column="22" bodyfile="Editor/ReplayToolsWindow.cs" bodystart="42" bodyend="-1"/>
+        <referencedby refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1af81711a9b0427493ccfa95c0ab0eec89" compoundref="_replay_tools_window_8cs" startline="478" endline="563">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.DrawReplaySection</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1aaefc230d489d2d9857db48891b9c96bf" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.sessionName</definition>
+        <argsstring></argsstring>
+        <name>sessionName</name>
+        <qualifiedname>JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.sessionName</qualifiedname>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+<para>Name to be used when saving the current recording session. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Editor/ReplayToolsWindow.cs" line="45" column="24" bodyfile="Editor/ReplayToolsWindow.cs" bodystart="45" bodyend="-1"/>
+        <referencedby refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a2037f559d6b36fbd3f063f629c0ac0b2" compoundref="_replay_tools_window_8cs" startline="211" endline="311">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.DrawRecordingSection</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a09e174a90232ce7c8483a9b377bf4f04" prot="private" static="no" mutable="no">
+        <type><ref refid="class_j_l___game_prod_env___custom_package_1_1_runtime_1_1_replay_recorder" kindref="compound">ReplayRecorder</ref></type>
+        <definition>ReplayRecorder JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.recorder</definition>
+        <argsstring></argsstring>
+        <name>recorder</name>
+        <qualifiedname>JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.recorder</qualifiedname>
+        <briefdescription>
+<para>Reference to the <ref refid="class_j_l___game_prod_env___custom_package_1_1_runtime_1_1_replay_recorder" kindref="compound">ReplayRecorder</ref> instance that manages recording. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Editor/ReplayToolsWindow.cs" line="48" column="32" bodyfile="Editor/ReplayToolsWindow.cs" bodystart="48" bodyend="-1"/>
+        <referencedby refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a2037f559d6b36fbd3f063f629c0ac0b2" compoundref="_replay_tools_window_8cs" startline="211" endline="311">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.DrawRecordingSection</referencedby>
+        <referencedby refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1ac884fb96b100a5a96a3550b5fe0f6e45" compoundref="_replay_tools_window_8cs" startline="120" endline="133">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.OnPlayModeStateChanged</referencedby>
+        <referencedby refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1aaede29458201e451dbb6f8863097498b" compoundref="_replay_tools_window_8cs" startline="701" endline="714">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1aec49231b64e80db991f2ed69bdba4cfc" prot="private" static="no" mutable="no">
+        <type><ref refid="class_j_l___game_prod_env___custom_package_1_1_runtime_1_1_replay_session" kindref="compound">ReplaySession</ref></type>
+        <definition>ReplaySession JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.selectedSession</definition>
+        <argsstring></argsstring>
+        <name>selectedSession</name>
+        <qualifiedname>JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.selectedSession</qualifiedname>
+        <briefdescription>
+<para>Currently selected replay session for playback. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Editor/ReplayToolsWindow.cs" line="51" column="31" bodyfile="Editor/ReplayToolsWindow.cs" bodystart="51" bodyend="-1"/>
+        <referencedby refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1af81711a9b0427493ccfa95c0ab0eec89" compoundref="_replay_tools_window_8cs" startline="478" endline="563">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.DrawReplaySection</referencedby>
+        <referencedby refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a52444e1cf34ebda9b54a13694f360e0a" compoundref="_replay_tools_window_8cs" startline="317" endline="471">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.DrawSessionsSection</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a5daa8d78cc9dd05945a3414fed896455" prot="private" static="no" mutable="no">
+        <type><ref refid="class_j_l___game_prod_env___custom_package_1_1_runtime_1_1_replay_player" kindref="compound">ReplayPlayer</ref></type>
+        <definition>ReplayPlayer JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.player</definition>
+        <argsstring></argsstring>
+        <name>player</name>
+        <qualifiedname>JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.player</qualifiedname>
+        <briefdescription>
+<para>Reference to the <ref refid="class_j_l___game_prod_env___custom_package_1_1_runtime_1_1_replay_player" kindref="compound">ReplayPlayer</ref> instance that manages playback. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Editor/ReplayToolsWindow.cs" line="54" column="30" bodyfile="Editor/ReplayToolsWindow.cs" bodystart="54" bodyend="-1"/>
+        <referencedby refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1af81711a9b0427493ccfa95c0ab0eec89" compoundref="_replay_tools_window_8cs" startline="478" endline="563">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.DrawReplaySection</referencedby>
+        <referencedby refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a52444e1cf34ebda9b54a13694f360e0a" compoundref="_replay_tools_window_8cs" startline="317" endline="471">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.DrawSessionsSection</referencedby>
+        <referencedby refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a3ab0b87780974da55ccc3ad75ce624d3" compoundref="_replay_tools_window_8cs" startline="107" endline="113">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.OnDestroy</referencedby>
+        <referencedby refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a8e9e247517b20351a9edf17a31a0e36c" compoundref="_replay_tools_window_8cs" startline="90" endline="101">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.OnDisable</referencedby>
+        <referencedby refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1af439527bfd431fdadee39bfe4b5f64ef" compoundref="_replay_tools_window_8cs" startline="139" endline="146">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.OnEditorUpdate</referencedby>
+        <referencedby refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1adb591dbd7aaf35cb3b7c82a5c6fece20" compoundref="_replay_tools_window_8cs" startline="75" endline="84">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.OnEnable</referencedby>
+        <referencedby refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1aaede29458201e451dbb6f8863097498b" compoundref="_replay_tools_window_8cs" startline="701" endline="714">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1af07786a660a894219fecd55aee809767" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.playbackSpeed</definition>
+        <argsstring></argsstring>
+        <name>playbackSpeed</name>
+        <qualifiedname>JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.playbackSpeed</qualifiedname>
+        <initializer>= 1f</initializer>
+        <briefdescription>
+<para>Playback speed multiplier (1.0 = normal speed). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Editor/ReplayToolsWindow.cs" line="57" column="23" bodyfile="Editor/ReplayToolsWindow.cs" bodystart="57" bodyend="-1"/>
+        <referencedby refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1af81711a9b0427493ccfa95c0ab0eec89" compoundref="_replay_tools_window_8cs" startline="478" endline="563">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.DrawReplaySection</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a12cc0f05448543789bd89a4eee235b8e" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.showReplayControls</definition>
+        <argsstring></argsstring>
+        <name>showReplayControls</name>
+        <qualifiedname>JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.showReplayControls</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Whether to show the replay control UI elements. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Editor/ReplayToolsWindow.cs" line="60" column="22" bodyfile="Editor/ReplayToolsWindow.cs" bodystart="60" bodyend="-1"/>
+        <referencedby refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a52444e1cf34ebda9b54a13694f360e0a" compoundref="_replay_tools_window_8cs" startline="317" endline="471">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.DrawSessionsSection</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a04905b3081808c03270da1690dedc5c3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.ShowWindow</definition>
+        <argsstring>()</argsstring>
+        <name>ShowWindow</name>
+        <qualifiedname>JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.ShowWindow</qualifiedname>
+        <briefdescription>
+<para>Creates and shows the Replay Tools window. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Editor/ReplayToolsWindow.cs" line="66" column="28" bodyfile="Editor/ReplayToolsWindow.cs" bodystart="66" bodyend="69"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1adb591dbd7aaf35cb3b7c82a5c6fece20" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.OnEnable</definition>
+        <argsstring>()</argsstring>
+        <name>OnEnable</name>
+        <qualifiedname>JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.OnEnable</qualifiedname>
+        <briefdescription>
+<para>Called when the window is enabled. Initializes the window by refreshing rigidbody lists, subscribing to editor events, and initializing the replay player. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Editor/ReplayToolsWindow.cs" line="75" column="22" bodyfile="Editor/ReplayToolsWindow.cs" bodystart="75" bodyend="84"/>
+        <references refid="class_j_l___game_prod_env___custom_package_1_1_runtime_1_1_replay_player_1a8eeaf3aca2f6b5afbd6ea4fad6368714" compoundref="_replay_player_8cs" startline="68" endline="77">JL_GameProdEnv_CustomPackage.Runtime.ReplayPlayer.Instance</references>
+        <references refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1af439527bfd431fdadee39bfe4b5f64ef" compoundref="_replay_tools_window_8cs" startline="139" endline="146">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.OnEditorUpdate</references>
+        <references refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1ac884fb96b100a5a96a3550b5fe0f6e45" compoundref="_replay_tools_window_8cs" startline="120" endline="133">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.OnPlayModeStateChanged</references>
+        <references refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a5daa8d78cc9dd05945a3414fed896455" compoundref="_replay_tools_window_8cs" startline="54">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.player</references>
+        <references refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a54b19e3ade0fba6c2cdf33d610c956c7" compoundref="_replay_tools_window_8cs" startline="152" endline="170">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.RefreshRigidbodyLists</references>
+      </memberdef>
+      <memberdef kind="function" id="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a8e9e247517b20351a9edf17a31a0e36c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.OnDisable</definition>
+        <argsstring>()</argsstring>
+        <name>OnDisable</name>
+        <qualifiedname>JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.OnDisable</qualifiedname>
+        <briefdescription>
+<para>Called when the window is disabled. Unsubscribes from editor events and stops any active playback. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Editor/ReplayToolsWindow.cs" line="90" column="22" bodyfile="Editor/ReplayToolsWindow.cs" bodystart="90" bodyend="101"/>
+        <references refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1af439527bfd431fdadee39bfe4b5f64ef" compoundref="_replay_tools_window_8cs" startline="139" endline="146">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.OnEditorUpdate</references>
+        <references refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1ac884fb96b100a5a96a3550b5fe0f6e45" compoundref="_replay_tools_window_8cs" startline="120" endline="133">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.OnPlayModeStateChanged</references>
+        <references refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a5daa8d78cc9dd05945a3414fed896455" compoundref="_replay_tools_window_8cs" startline="54">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.player</references>
+        <references refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a54b19e3ade0fba6c2cdf33d610c956c7" compoundref="_replay_tools_window_8cs" startline="152" endline="170">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.RefreshRigidbodyLists</references>
+      </memberdef>
+      <memberdef kind="function" id="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a3ab0b87780974da55ccc3ad75ce624d3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.OnDestroy</definition>
+        <argsstring>()</argsstring>
+        <name>OnDestroy</name>
+        <qualifiedname>JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.OnDestroy</qualifiedname>
+        <briefdescription>
+<para>Called when the window is destroyed. Performs final cleanup of the replay player instance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Editor/ReplayToolsWindow.cs" line="107" column="22" bodyfile="Editor/ReplayToolsWindow.cs" bodystart="107" bodyend="113"/>
+        <references refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a5daa8d78cc9dd05945a3414fed896455" compoundref="_replay_tools_window_8cs" startline="54">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.player</references>
+      </memberdef>
+      <memberdef kind="function" id="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1ac884fb96b100a5a96a3550b5fe0f6e45" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.OnPlayModeStateChanged</definition>
+        <argsstring>(PlayModeStateChange state)</argsstring>
+        <name>OnPlayModeStateChanged</name>
+        <qualifiedname>JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.OnPlayModeStateChanged</qualifiedname>
+        <param>
+          <type>PlayModeStateChange</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Handles state changes between edit mode and play mode. Initializes the recorder when entering play mode and cleans up when exiting. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current play mode state.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Editor/ReplayToolsWindow.cs" line="120" column="22" bodyfile="Editor/ReplayToolsWindow.cs" bodystart="120" bodyend="133"/>
+        <references refid="class_j_l___game_prod_env___custom_package_1_1_runtime_1_1_replay_recorder_1a1f622b7b06add9d6aa0ca10bc24b4ca5" compoundref="_replay_system_8cs" startline="299" endline="311">JL_GameProdEnv_CustomPackage.Runtime.ReplayRecorder.Instance</references>
+        <references refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a09e174a90232ce7c8483a9b377bf4f04" compoundref="_replay_tools_window_8cs" startline="48">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.recorder</references>
+        <referencedby refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a8e9e247517b20351a9edf17a31a0e36c" compoundref="_replay_tools_window_8cs" startline="90" endline="101">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.OnDisable</referencedby>
+        <referencedby refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1adb591dbd7aaf35cb3b7c82a5c6fece20" compoundref="_replay_tools_window_8cs" startline="75" endline="84">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.OnEnable</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1af439527bfd431fdadee39bfe4b5f64ef" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.OnEditorUpdate</definition>
+        <argsstring>()</argsstring>
+        <name>OnEditorUpdate</name>
+        <qualifiedname>JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.OnEditorUpdate</qualifiedname>
+        <briefdescription>
+<para>Called during regular editor updates. Used to repaint the window during replay playback to show updated playback progress. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Editor/ReplayToolsWindow.cs" line="139" column="22" bodyfile="Editor/ReplayToolsWindow.cs" bodystart="139" bodyend="146"/>
+        <references refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a5daa8d78cc9dd05945a3414fed896455" compoundref="_replay_tools_window_8cs" startline="54">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.player</references>
+        <referencedby refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a8e9e247517b20351a9edf17a31a0e36c" compoundref="_replay_tools_window_8cs" startline="90" endline="101">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.OnDisable</referencedby>
+        <referencedby refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1adb591dbd7aaf35cb3b7c82a5c6fece20" compoundref="_replay_tools_window_8cs" startline="75" endline="84">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.OnEnable</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a54b19e3ade0fba6c2cdf33d610c956c7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.RefreshRigidbodyLists</definition>
+        <argsstring>()</argsstring>
+        <name>RefreshRigidbodyLists</name>
+        <qualifiedname>JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.RefreshRigidbodyLists</qualifiedname>
+        <briefdescription>
+<para>Refreshes the lists of player and non-player rigidbodies in the scene. Rigidbodies with a PlayerInput component are classified as player rigidbodies. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Editor/ReplayToolsWindow.cs" line="152" column="22" bodyfile="Editor/ReplayToolsWindow.cs" bodystart="152" bodyend="170"/>
+        <references refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a52e2d14a8ffb12cfed0d567f73b9c576" compoundref="_replay_tools_window_8cs" startline="26">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.normalRigidbodies</references>
+        <references refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a12495372c249548eaa781c0ddd0bfb1f" compoundref="_replay_tools_window_8cs" startline="20">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.playerRigidbodies</references>
+        <referencedby refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a2037f559d6b36fbd3f063f629c0ac0b2" compoundref="_replay_tools_window_8cs" startline="211" endline="311">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.DrawRecordingSection</referencedby>
+        <referencedby refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a8e9e247517b20351a9edf17a31a0e36c" compoundref="_replay_tools_window_8cs" startline="90" endline="101">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.OnDisable</referencedby>
+        <referencedby refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1adb591dbd7aaf35cb3b7c82a5c6fece20" compoundref="_replay_tools_window_8cs" startline="75" endline="84">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.OnEnable</referencedby>
+        <referencedby refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a6b724f04e55e37cbcb66bcfadd64c923" compoundref="_replay_tools_window_8cs" startline="176" endline="205">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.OnGUI</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a6b724f04e55e37cbcb66bcfadd64c923" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.OnGUI</definition>
+        <argsstring>()</argsstring>
+        <name>OnGUI</name>
+        <qualifiedname>JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.OnGUI</qualifiedname>
+        <briefdescription>
+<para>Main GUI method that draws the entire window content. Organizes the window into distinct functional sections. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Editor/ReplayToolsWindow.cs" line="176" column="22" bodyfile="Editor/ReplayToolsWindow.cs" bodystart="176" bodyend="205"/>
+        <references refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a2037f559d6b36fbd3f063f629c0ac0b2" compoundref="_replay_tools_window_8cs" startline="211" endline="311">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.DrawRecordingSection</references>
+        <references refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1af81711a9b0427493ccfa95c0ab0eec89" compoundref="_replay_tools_window_8cs" startline="478" endline="563">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.DrawReplaySection</references>
+        <references refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1afcc8e6953207e24e0e996930fe374d97" compoundref="_replay_tools_window_8cs" startline="569" endline="622">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.DrawRigidbodyLists</references>
+        <references refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1ae8173a28dcc2541a6f7d0284ebe73b7d" compoundref="_replay_tools_window_8cs" startline="628" endline="645">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.DrawSelectedRigidbodyInfo</references>
+        <references refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a52444e1cf34ebda9b54a13694f360e0a" compoundref="_replay_tools_window_8cs" startline="317" endline="471">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.DrawSessionsSection</references>
+        <references refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a54b19e3ade0fba6c2cdf33d610c956c7" compoundref="_replay_tools_window_8cs" startline="152" endline="170">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.RefreshRigidbodyLists</references>
+      </memberdef>
+      <memberdef kind="function" id="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a2037f559d6b36fbd3f063f629c0ac0b2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.DrawRecordingSection</definition>
+        <argsstring>()</argsstring>
+        <name>DrawRecordingSection</name>
+        <qualifiedname>JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.DrawRecordingSection</qualifiedname>
+        <briefdescription>
+<para>Draws the recording controls section of the window. Includes recording start/stop buttons, recording status, and save controls. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Editor/ReplayToolsWindow.cs" line="211" column="22" bodyfile="Editor/ReplayToolsWindow.cs" bodystart="211" bodyend="311"/>
+        <references refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a52e2d14a8ffb12cfed0d567f73b9c576" compoundref="_replay_tools_window_8cs" startline="26">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.normalRigidbodies</references>
+        <references refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a12495372c249548eaa781c0ddd0bfb1f" compoundref="_replay_tools_window_8cs" startline="20">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.playerRigidbodies</references>
+        <references refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a09e174a90232ce7c8483a9b377bf4f04" compoundref="_replay_tools_window_8cs" startline="48">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.recorder</references>
+        <references refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a65624ffbdec64183b363eb3a9405cad5" compoundref="_replay_tools_window_8cs" startline="40">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.recordingFoldout</references>
+        <references refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a54b19e3ade0fba6c2cdf33d610c956c7" compoundref="_replay_tools_window_8cs" startline="152" endline="170">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.RefreshRigidbodyLists</references>
+        <references refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1aaefc230d489d2d9857db48891b9c96bf" compoundref="_replay_tools_window_8cs" startline="45">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.sessionName</references>
+        <referencedby refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a6b724f04e55e37cbcb66bcfadd64c923" compoundref="_replay_tools_window_8cs" startline="176" endline="205">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.OnGUI</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a52444e1cf34ebda9b54a13694f360e0a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.DrawSessionsSection</definition>
+        <argsstring>()</argsstring>
+        <name>DrawSessionsSection</name>
+        <qualifiedname>JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.DrawSessionsSection</qualifiedname>
+        <briefdescription>
+<para>Draws the saved sessions section of the window. Displays a list of all saved replay sessions with options to select, delete, or clear all. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Editor/ReplayToolsWindow.cs" line="317" column="22" bodyfile="Editor/ReplayToolsWindow.cs" bodystart="317" bodyend="471"/>
+        <references refid="class_j_l___game_prod_env___custom_package_1_1_runtime_1_1_replay_session_manager_1af1aafe23b9c017d0877610448521b40f" compoundref="_replay_system_8cs" startline="577" endline="585">JL_GameProdEnv_CustomPackage.Runtime.ReplaySessionManager.ClearAllSessions</references>
+        <references refid="class_j_l___game_prod_env___custom_package_1_1_runtime_1_1_replay_session_manager_1ab7bb7aec3cff52fb0cf1a4d4b59d58bd">JL_GameProdEnv_CustomPackage.Runtime.ReplaySessionManager.GetAllSessions</references>
+        <references refid="class_j_l___game_prod_env___custom_package_1_1_runtime_1_1_replay_player_1a8eeaf3aca2f6b5afbd6ea4fad6368714" compoundref="_replay_player_8cs" startline="68" endline="77">JL_GameProdEnv_CustomPackage.Runtime.ReplayPlayer.Instance</references>
+        <references refid="class_j_l___game_prod_env___custom_package_1_1_runtime_1_1_replay_session_manager_1ac3ace7710d37e7d7dc0bb9c76b356751" compoundref="_replay_system_8cs" startline="515" endline="526">JL_GameProdEnv_CustomPackage.Runtime.ReplaySessionManager.Instance</references>
+        <references refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a5daa8d78cc9dd05945a3414fed896455" compoundref="_replay_tools_window_8cs" startline="54">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.player</references>
+        <references refid="class_j_l___game_prod_env___custom_package_1_1_runtime_1_1_replay_session_manager_1a1f2503c2009257530be0f92142b34ddb" compoundref="_replay_system_8cs" startline="567" endline="571">JL_GameProdEnv_CustomPackage.Runtime.ReplaySessionManager.RemoveSession</references>
+        <references refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1aec49231b64e80db991f2ed69bdba4cfc" compoundref="_replay_tools_window_8cs" startline="51">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.selectedSession</references>
+        <references refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a2d5ccfc6fdff31b8ac9b94c3f629bd57" compoundref="_replay_tools_window_8cs" startline="32">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.sessionScrollPos</references>
+        <references refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a91e3b9f6c67280123f5976eb2b02f46b" compoundref="_replay_tools_window_8cs" startline="41">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.sessionsFoldout</references>
+        <references refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a12cc0f05448543789bd89a4eee235b8e" compoundref="_replay_tools_window_8cs" startline="60">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.showReplayControls</references>
+        <referencedby refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a6b724f04e55e37cbcb66bcfadd64c923" compoundref="_replay_tools_window_8cs" startline="176" endline="205">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.OnGUI</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1af81711a9b0427493ccfa95c0ab0eec89" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.DrawReplaySection</definition>
+        <argsstring>()</argsstring>
+        <name>DrawReplaySection</name>
+        <qualifiedname>JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.DrawReplaySection</qualifiedname>
+        <briefdescription>
+<para>Draws the replay controls section of the window. Provides playback controls for the selected replay session including play/pause, stop, and playback speed adjustment. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Editor/ReplayToolsWindow.cs" line="478" column="22" bodyfile="Editor/ReplayToolsWindow.cs" bodystart="478" bodyend="563"/>
+        <references refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1af07786a660a894219fecd55aee809767" compoundref="_replay_tools_window_8cs" startline="57">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.playbackSpeed</references>
+        <references refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a5daa8d78cc9dd05945a3414fed896455" compoundref="_replay_tools_window_8cs" startline="54">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.player</references>
+        <references refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a2e591369c134db2c36be6438e0aa134a" compoundref="_replay_tools_window_8cs" startline="42">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.replayFoldout</references>
+        <references refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1aec49231b64e80db991f2ed69bdba4cfc" compoundref="_replay_tools_window_8cs" startline="51">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.selectedSession</references>
+        <referencedby refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a6b724f04e55e37cbcb66bcfadd64c923" compoundref="_replay_tools_window_8cs" startline="176" endline="205">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.OnGUI</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1afcc8e6953207e24e0e996930fe374d97" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.DrawRigidbodyLists</definition>
+        <argsstring>()</argsstring>
+        <name>DrawRigidbodyLists</name>
+        <qualifiedname>JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.DrawRigidbodyLists</qualifiedname>
+        <briefdescription>
+<para>Draws the lists of player and normal rigidbodies detected in the scene. Allows selection of individual rigidbodies for detailed information. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Editor/ReplayToolsWindow.cs" line="569" column="22" bodyfile="Editor/ReplayToolsWindow.cs" bodystart="569" bodyend="622"/>
+        <references refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a9f9937f58fbb537ab31668e2e944392b" compoundref="_replay_tools_window_8cs" startline="652" endline="695">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.DrawRigidbodyItem</references>
+        <references refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a137e663d737fc7f6220158783fc13083" compoundref="_replay_tools_window_8cs" startline="39">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.normalFoldout</references>
+        <references refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a52e2d14a8ffb12cfed0d567f73b9c576" compoundref="_replay_tools_window_8cs" startline="26">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.normalRigidbodies</references>
+        <references refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a3971eb3ca0037b7788f5ef54d30c50a9" compoundref="_replay_tools_window_8cs" startline="38">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.playerFoldout</references>
+        <references refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a12495372c249548eaa781c0ddd0bfb1f" compoundref="_replay_tools_window_8cs" startline="20">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.playerRigidbodies</references>
+        <references refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1afe6da2ad3fe9f8c9a6da0d8a8869dcdb" compoundref="_replay_tools_window_8cs" startline="29">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.scrollPos</references>
+        <referencedby refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a6b724f04e55e37cbcb66bcfadd64c923" compoundref="_replay_tools_window_8cs" startline="176" endline="205">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.OnGUI</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1ae8173a28dcc2541a6f7d0284ebe73b7d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.DrawSelectedRigidbodyInfo</definition>
+        <argsstring>()</argsstring>
+        <name>DrawSelectedRigidbodyInfo</name>
+        <qualifiedname>JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.DrawSelectedRigidbodyInfo</qualifiedname>
+        <briefdescription>
+<para>Draws detailed information about the currently selected rigidbody. Shows properties like name, type, mass, position, and velocity (in play mode). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Editor/ReplayToolsWindow.cs" line="628" column="22" bodyfile="Editor/ReplayToolsWindow.cs" bodystart="628" bodyend="645"/>
+        <references refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1ab44df5a563419ccc343be00c2699db94" compoundref="_replay_tools_window_8cs" startline="35">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.selectedRigidbody</references>
+        <referencedby refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a6b724f04e55e37cbcb66bcfadd64c923" compoundref="_replay_tools_window_8cs" startline="176" endline="205">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.OnGUI</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a9f9937f58fbb537ab31668e2e944392b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.DrawRigidbodyItem</definition>
+        <argsstring>(Rigidbody rb, bool isPlayer)</argsstring>
+        <name>DrawRigidbodyItem</name>
+        <qualifiedname>JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.DrawRigidbodyItem</qualifiedname>
+        <param>
+          <type>Rigidbody</type>
+          <declname>rb</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isPlayer</declname>
+        </param>
+        <briefdescription>
+<para>Draws a single rigidbody item in the list with selection toggle and basic information. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rigidbody to display</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>isPlayer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Whether this is a player-controlled rigidbody</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Editor/ReplayToolsWindow.cs" line="652" column="22" bodyfile="Editor/ReplayToolsWindow.cs" bodystart="652" bodyend="695"/>
+        <references refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1ab44df5a563419ccc343be00c2699db94" compoundref="_replay_tools_window_8cs" startline="35">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.selectedRigidbody</references>
+        <referencedby refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1afcc8e6953207e24e0e996930fe374d97" compoundref="_replay_tools_window_8cs" startline="569" endline="622">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.DrawRigidbodyLists</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1aaede29458201e451dbb6f8863097498b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.Update</definition>
+        <argsstring>()</argsstring>
+        <name>Update</name>
+        <qualifiedname>JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.Update</qualifiedname>
+        <briefdescription>
+<para>Called every frame during editor updates. Repaints the window when necessary to reflect current recording or playback status. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Editor/ReplayToolsWindow.cs" line="701" column="22" bodyfile="Editor/ReplayToolsWindow.cs" bodystart="701" bodyend="714"/>
+        <references refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a5daa8d78cc9dd05945a3414fed896455" compoundref="_replay_tools_window_8cs" startline="54">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.player</references>
+        <references refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a09e174a90232ce7c8483a9b377bf4f04" compoundref="_replay_tools_window_8cs" startline="48">JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow.recorder</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Custom Unity <ref refid="namespace_j_l___game_prod_env___custom_package_1_1_editor" kindref="compound">Editor</ref> window for managing gameplay recordings and replays. Provides functionality to record, save, and replay physics-based gameplay with support for both player and non-player objects. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>EditorWindow</label>
+      </node>
+      <node id="1">
+        <label>JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow</label>
+        <link refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>EditorWindow</label>
+      </node>
+      <node id="1">
+        <label>JL_GameProdEnv_CustomPackage.Editor.ReplayToolsWindow</label>
+        <link refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-recorder</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-selectedSession</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-player</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>JL_GameProdEnv_CustomPackage.Runtime.ReplayPlayer</label>
+        <link refid="class_j_l___game_prod_env___custom_package_1_1_runtime_1_1_replay_player"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-currentSession</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-instance</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>JL_GameProdEnv_CustomPackage.Runtime.ReplayRecorder</label>
+        <link refid="class_j_l___game_prod_env___custom_package_1_1_runtime_1_1_replay_recorder"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-instance</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>JL_GameProdEnv_CustomPackage.Runtime.ReplaySession</label>
+        <link refid="class_j_l___game_prod_env___custom_package_1_1_runtime_1_1_replay_session"/>
+      </node>
+      <node id="4">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="Editor/ReplayToolsWindow.cs" line="14" column="11" bodyfile="Editor/ReplayToolsWindow.cs" bodystart="15" bodyend="715"/>
+    <listofallmembers>
+      <member refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a2037f559d6b36fbd3f063f629c0ac0b2" prot="private" virt="non-virtual"><scope>JL_GameProdEnv_CustomPackage::Editor::ReplayToolsWindow</scope><name>DrawRecordingSection</name></member>
+      <member refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1af81711a9b0427493ccfa95c0ab0eec89" prot="private" virt="non-virtual"><scope>JL_GameProdEnv_CustomPackage::Editor::ReplayToolsWindow</scope><name>DrawReplaySection</name></member>
+      <member refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a9f9937f58fbb537ab31668e2e944392b" prot="private" virt="non-virtual"><scope>JL_GameProdEnv_CustomPackage::Editor::ReplayToolsWindow</scope><name>DrawRigidbodyItem</name></member>
+      <member refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1afcc8e6953207e24e0e996930fe374d97" prot="private" virt="non-virtual"><scope>JL_GameProdEnv_CustomPackage::Editor::ReplayToolsWindow</scope><name>DrawRigidbodyLists</name></member>
+      <member refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1ae8173a28dcc2541a6f7d0284ebe73b7d" prot="private" virt="non-virtual"><scope>JL_GameProdEnv_CustomPackage::Editor::ReplayToolsWindow</scope><name>DrawSelectedRigidbodyInfo</name></member>
+      <member refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a52444e1cf34ebda9b54a13694f360e0a" prot="private" virt="non-virtual"><scope>JL_GameProdEnv_CustomPackage::Editor::ReplayToolsWindow</scope><name>DrawSessionsSection</name></member>
+      <member refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a137e663d737fc7f6220158783fc13083" prot="private" virt="non-virtual"><scope>JL_GameProdEnv_CustomPackage::Editor::ReplayToolsWindow</scope><name>normalFoldout</name></member>
+      <member refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a52e2d14a8ffb12cfed0d567f73b9c576" prot="private" virt="non-virtual"><scope>JL_GameProdEnv_CustomPackage::Editor::ReplayToolsWindow</scope><name>normalRigidbodies</name></member>
+      <member refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a3ab0b87780974da55ccc3ad75ce624d3" prot="private" virt="non-virtual"><scope>JL_GameProdEnv_CustomPackage::Editor::ReplayToolsWindow</scope><name>OnDestroy</name></member>
+      <member refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a8e9e247517b20351a9edf17a31a0e36c" prot="private" virt="non-virtual"><scope>JL_GameProdEnv_CustomPackage::Editor::ReplayToolsWindow</scope><name>OnDisable</name></member>
+      <member refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1af439527bfd431fdadee39bfe4b5f64ef" prot="private" virt="non-virtual"><scope>JL_GameProdEnv_CustomPackage::Editor::ReplayToolsWindow</scope><name>OnEditorUpdate</name></member>
+      <member refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1adb591dbd7aaf35cb3b7c82a5c6fece20" prot="private" virt="non-virtual"><scope>JL_GameProdEnv_CustomPackage::Editor::ReplayToolsWindow</scope><name>OnEnable</name></member>
+      <member refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a6b724f04e55e37cbcb66bcfadd64c923" prot="private" virt="non-virtual"><scope>JL_GameProdEnv_CustomPackage::Editor::ReplayToolsWindow</scope><name>OnGUI</name></member>
+      <member refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1ac884fb96b100a5a96a3550b5fe0f6e45" prot="private" virt="non-virtual"><scope>JL_GameProdEnv_CustomPackage::Editor::ReplayToolsWindow</scope><name>OnPlayModeStateChanged</name></member>
+      <member refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1af07786a660a894219fecd55aee809767" prot="private" virt="non-virtual"><scope>JL_GameProdEnv_CustomPackage::Editor::ReplayToolsWindow</scope><name>playbackSpeed</name></member>
+      <member refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a5daa8d78cc9dd05945a3414fed896455" prot="private" virt="non-virtual"><scope>JL_GameProdEnv_CustomPackage::Editor::ReplayToolsWindow</scope><name>player</name></member>
+      <member refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a3971eb3ca0037b7788f5ef54d30c50a9" prot="private" virt="non-virtual"><scope>JL_GameProdEnv_CustomPackage::Editor::ReplayToolsWindow</scope><name>playerFoldout</name></member>
+      <member refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a12495372c249548eaa781c0ddd0bfb1f" prot="private" virt="non-virtual"><scope>JL_GameProdEnv_CustomPackage::Editor::ReplayToolsWindow</scope><name>playerRigidbodies</name></member>
+      <member refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a09e174a90232ce7c8483a9b377bf4f04" prot="private" virt="non-virtual"><scope>JL_GameProdEnv_CustomPackage::Editor::ReplayToolsWindow</scope><name>recorder</name></member>
+      <member refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a65624ffbdec64183b363eb3a9405cad5" prot="private" virt="non-virtual"><scope>JL_GameProdEnv_CustomPackage::Editor::ReplayToolsWindow</scope><name>recordingFoldout</name></member>
+      <member refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a54b19e3ade0fba6c2cdf33d610c956c7" prot="private" virt="non-virtual"><scope>JL_GameProdEnv_CustomPackage::Editor::ReplayToolsWindow</scope><name>RefreshRigidbodyLists</name></member>
+      <member refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a2e591369c134db2c36be6438e0aa134a" prot="private" virt="non-virtual"><scope>JL_GameProdEnv_CustomPackage::Editor::ReplayToolsWindow</scope><name>replayFoldout</name></member>
+      <member refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1afe6da2ad3fe9f8c9a6da0d8a8869dcdb" prot="private" virt="non-virtual"><scope>JL_GameProdEnv_CustomPackage::Editor::ReplayToolsWindow</scope><name>scrollPos</name></member>
+      <member refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1ab44df5a563419ccc343be00c2699db94" prot="private" virt="non-virtual"><scope>JL_GameProdEnv_CustomPackage::Editor::ReplayToolsWindow</scope><name>selectedRigidbody</name></member>
+      <member refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1aec49231b64e80db991f2ed69bdba4cfc" prot="private" virt="non-virtual"><scope>JL_GameProdEnv_CustomPackage::Editor::ReplayToolsWindow</scope><name>selectedSession</name></member>
+      <member refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1aaefc230d489d2d9857db48891b9c96bf" prot="private" virt="non-virtual"><scope>JL_GameProdEnv_CustomPackage::Editor::ReplayToolsWindow</scope><name>sessionName</name></member>
+      <member refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a2d5ccfc6fdff31b8ac9b94c3f629bd57" prot="private" virt="non-virtual"><scope>JL_GameProdEnv_CustomPackage::Editor::ReplayToolsWindow</scope><name>sessionScrollPos</name></member>
+      <member refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a91e3b9f6c67280123f5976eb2b02f46b" prot="private" virt="non-virtual"><scope>JL_GameProdEnv_CustomPackage::Editor::ReplayToolsWindow</scope><name>sessionsFoldout</name></member>
+      <member refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a12cc0f05448543789bd89a4eee235b8e" prot="private" virt="non-virtual"><scope>JL_GameProdEnv_CustomPackage::Editor::ReplayToolsWindow</scope><name>showReplayControls</name></member>
+      <member refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1a04905b3081808c03270da1690dedc5c3" prot="public" virt="non-virtual"><scope>JL_GameProdEnv_CustomPackage::Editor::ReplayToolsWindow</scope><name>ShowWindow</name></member>
+      <member refid="class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window_1aaede29458201e451dbb6f8863097498b" prot="private" virt="non-virtual"><scope>JL_GameProdEnv_CustomPackage::Editor::ReplayToolsWindow</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

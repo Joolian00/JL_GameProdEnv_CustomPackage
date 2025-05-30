@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>Custom Replay Tool for Unity</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="index_1md__r_e_a_d_m_e"/></para>
+<para>A Unity package for recording, saving, and replaying physics-based gameplay.</para>
+<para>Records Rigidbody transformations at configurable frequencies, with higher precision for player objects. (Though I think this is currently bugged)</para>
+<para>Provides an editor window for easy recording management and visualization of replays.</para>
+<sect1 id="index_1autotoc_md1">
+<title>Documentation</title><para><ulink url="https://github.com/Joolian00/JL_GameProdEnv_CustomPackage/tree/main/Docs/html/index.html">Documentation</ulink></para>
+</sect1>
+<sect1 id="index_1autotoc_md2">
+<title>Installation</title><para>Unity Package Manager: Click on the plus → Add from Custom Git Url</para>
+<para><programlisting><codeline><highlight class="normal">https://github.com/Joolian00/JL_GameProdEnv_CustomPackage.git</highlight></codeline>
+</programlisting> </para>
+</sect1>
+    </detaileddescription>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

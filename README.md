@@ -8,7 +8,7 @@ Provides an editor window for easy recording management and visualization of rep
 
 ## Documentation
 
-[Documentation](https://github.com/Joolian00/JL_GameProdEnv_CustomPackage/tree/main/Docs/html/index.html)
+[Documentation](./api.md)
 
 
 ## Installation

@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>Custom<sp/>Replay<sp/>Tool<sp/>for<sp/>Unity</highlight></codeline>
+<codeline><highlight class="normal">A<sp/>Unity<sp/>package<sp/>for<sp/>recording,<sp/>saving,<sp/>and<sp/>replaying<sp/>physics-based<sp/>gameplay.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Records<sp/>Rigidbody<sp/>transformations<sp/>at<sp/>configurable<sp/>frequencies,<sp/>with<sp/>higher<sp/>precision<sp/>for<sp/>player<sp/>objects.<sp/>(Though<sp/>I<sp/>think<sp/>this<sp/>is<sp/>currently<sp/>bugged)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Provides<sp/>an<sp/>editor<sp/>window<sp/>for<sp/>easy<sp/>recording<sp/>management<sp/>and<sp/>visualization<sp/>of<sp/>replays.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Documentation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[Documentation](https://github.com/Joolian00/JL_GameProdEnv_CustomPackage/tree/main/Docs/html/index.html)</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Installation</highlight></codeline>
+<codeline><highlight class="normal">Unity<sp/>Package<sp/>Manager:<sp/>Click<sp/>on<sp/>the<sp/>plus<sp/>→<sp/>Add<sp/>from<sp/>Custom<sp/>Git<sp/>Url</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">https://github.com/Joolian00/JL_GameProdEnv_CustomPackage.git</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+    </programlisting>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>
