@@ -306,16 +306,36 @@ namespace JL_GameProdEnv_CustomPackage.Editor
                     // Handle click event for the row
                     if (Event.current.type == EventType.MouseDown && rowRect.Contains(Event.current.mousePosition))
                     {
-                        selectedSession = isSelected ? null : session;
-                        showReplayControls = !isSelected;
-                        
-                        if (!isSelected && player != null)
+                        // If clicking the already selected session, deselect it and clear visualizations
+                        if (isSelected)
                         {
-                            player.LoadSession(session);
+                            selectedSession = null;
+                            showReplayControls = false;
+                            
+                            if (player != null)
+                            {
+                                player.StopPlayback();
+                                player.ClearVisualObjects();
+                            }
                         }
-                        else if (player != null)
+                        else
                         {
-                            player.StopPlayback();
+                            // If selecting a different session
+                            // First clear any existing visualizations from the previous session
+                            if (player != null && selectedSession != null)
+                            {
+                                player.StopPlayback();
+                                player.ClearVisualObjects();
+                            }
+                            
+                            // Then select the new session
+                            selectedSession = session;
+                            showReplayControls = true;
+                            
+                            if (player != null)
+                            {
+                                player.LoadSession(session);
+                            }
                         }
                         
                         Event.current.Use();
@@ -335,6 +355,7 @@ namespace JL_GameProdEnv_CustomPackage.Editor
                                 if (player != null)
                                 {
                                     player.StopPlayback();
+                                    player.ClearVisualObjects();
                                 }
                             }
                             
@@ -365,6 +386,15 @@ namespace JL_GameProdEnv_CustomPackage.Editor
                         }
                         
                         ReplaySessionManager.Instance.ClearAllSessions();
+                    }
+                }
+                
+                // Add "Clear All Visualizations" button
+                if (GUILayout.Button("Clear All Visualizations"))
+                {
+                    if (player != null)
+                    {
+                        player.ClearVisualObjects();
                     }
                 }
                 EditorGUILayout.EndHorizontal();
@@ -453,6 +483,9 @@ namespace JL_GameProdEnv_CustomPackage.Editor
             }
             
             EditorGUILayout.EndHorizontal();
+            
+            // Add a Clear Visualization button
+            EditorGUILayout.Space();
 
             EditorGUI.indentLevel--;
         }

@@ -38,6 +38,8 @@ namespace JL_GameProdEnv_CustomPackage.Runtime
         public float SessionDuration => currentSession != null ? currentSession.duration : 0f;
         public string CurrentSessionName => currentSession != null ? currentSession.name : string.Empty;
         
+        private GameObject replayParentObject;
+
         public void LoadSession(ReplaySession session)
         {
             StopPlayback();
@@ -196,6 +198,10 @@ namespace JL_GameProdEnv_CustomPackage.Runtime
         {
             if (currentSession == null) return;
             
+            // Create a parent object for all replay visualizations
+            replayParentObject = new GameObject("Replay_Visualization");
+            replayParentObject.hideFlags = HideFlags.DontSave;
+            
             foreach (var recordedObject in currentSession.recordedObjects)
             {
                 GameObject visualObject = null;
@@ -211,10 +217,9 @@ namespace JL_GameProdEnv_CustomPackage.Runtime
                     
                     // Reset the transform before applying recorded data
                     // This is crucial for objects with parent-based scale modifications
-                    visualObject.transform.SetParent(null);
+                    visualObject.transform.SetParent(replayParentObject.transform, false);
                     
                     // Reset local scale to remove parent scale influence
-                    // We'll calculate the correct global scale by traversing the original hierarchy
                     visualObject.transform.localScale = Vector3.one;
                     
                     // Calculate the global scale from the original object by traversing its hierarchy
@@ -272,6 +277,7 @@ namespace JL_GameProdEnv_CustomPackage.Runtime
                         visualObject = GameObject.CreatePrimitive(PrimitiveType.Capsule);
                         visualObject.name = $"Replay_{recordedObject.objectName}";
                         visualObject.transform.localScale = new Vector3(1f, 1f, 1f);
+                        visualObject.transform.SetParent(replayParentObject.transform, false);
                         
                         // Set the color in edit mode
                         var renderer = visualObject.GetComponent<Renderer>();
@@ -287,6 +293,7 @@ namespace JL_GameProdEnv_CustomPackage.Runtime
                         visualObject = GameObject.CreatePrimitive(PrimitiveType.Cube);
                         visualObject.name = $"Replay_{recordedObject.objectName}";
                         visualObject.transform.localScale = new Vector3(1f, 1f, 1f);
+                        visualObject.transform.SetParent(replayParentObject.transform, false);
                         
                         // Set the color in edit mode
                         var renderer = visualObject.GetComponent<Renderer>();
@@ -311,7 +318,7 @@ namespace JL_GameProdEnv_CustomPackage.Runtime
             }
         }
         
-        private void ClearVisualObjects()
+        public void ClearVisualObjects()
         {
             foreach (var obj in visualObjects)
             {
@@ -322,6 +329,13 @@ namespace JL_GameProdEnv_CustomPackage.Runtime
             }
             
             visualObjects.Clear();
+            
+            // Also destroy the parent object
+            if (replayParentObject != null)
+            {
+                Object.DestroyImmediate(replayParentObject);
+                replayParentObject = null;
+            }
         }
         
         public void CleanUp()
