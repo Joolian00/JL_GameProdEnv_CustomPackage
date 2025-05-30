@@ -5,21 +5,65 @@ using UnityEditor;
 
 namespace JL_GameProdEnv_CustomPackage.Runtime
 {
+    /// <summary>
+    /// Handles the playback of recorded replay sessions within the Unity Editor.
+    /// Manages visualization objects, playback controls, and frame interpolation.
+    /// </summary>
     public class ReplayPlayer
     {
-        // Visualization settings
+        /// <summary>
+        /// Color used for visualizing player-controlled objects during replay.
+        /// </summary>
         private Color playerColor = new Color(0.2f, 0.6f, 1f, 0.8f);
+        
+        /// <summary>
+        /// Color used for visualizing normal (non-player) objects during replay.
+        /// </summary>
         private Color normalObjectColor = new Color(0.8f, 0.8f, 0.8f, 0.8f);
         
+        /// <summary>
+        /// The currently loaded replay session data.
+        /// </summary>
         private ReplaySession currentSession;
+        
+        /// <summary>
+        /// List of visualization GameObjects representing the recorded objects during playback.
+        /// </summary>
         private List<GameObject> visualObjects = new List<GameObject>();
+        
+        /// <summary>
+        /// Flag indicating whether replay playback is currently active.
+        /// </summary>
         private bool isPlaying = false;
+        
+        /// <summary>
+        /// The editor time when playback was started, used for calculating playback time.
+        /// </summary>
         private float playbackStartTime;
+        
+        /// <summary>
+        /// Current playback time in seconds from the start of the replay.
+        /// </summary>
         private float playbackTime = 0f;
+        
+        /// <summary>
+        /// Playback speed multiplier (1.0 = normal speed).
+        /// </summary>
         private float playbackSpeed = 1f;
+        
+        /// <summary>
+        /// The time of the last update, used for calculating delta time in editor mode.
+        /// </summary>
         private float lastUpdateTime;
         
+        /// <summary>
+        /// Singleton instance of the ReplayPlayer class.
+        /// </summary>
         private static ReplayPlayer instance;
+        
+        /// <summary>
+        /// Gets the singleton instance of the ReplayPlayer, creating it if it doesn't exist.
+        /// </summary>
         public static ReplayPlayer Instance
         {
             get
@@ -32,14 +76,40 @@ namespace JL_GameProdEnv_CustomPackage.Runtime
             }
         }
         
+        /// <summary>
+        /// Gets whether replay playback is currently active.
+        /// </summary>
         public bool IsPlaying => isPlaying;
+        
+        /// <summary>
+        /// Gets the current playback progress as a normalized value between 0 and 1.
+        /// </summary>
         public float PlaybackProgress => currentSession != null ? Mathf.Clamp01(playbackTime / currentSession.duration) : 0f;
+
+        /// <summary>
+        /// Gets the current playback time in seconds.
+        /// </summary>
         public float PlaybackTime => playbackTime;
+        
+        /// <summary>
+        /// Gets the total duration of the current session in seconds.
+        /// </summary>
         public float SessionDuration => currentSession != null ? currentSession.duration : 0f;
+        
+        /// <summary>
+        /// Gets the name of the currently loaded replay session.
+        /// </summary>
         public string CurrentSessionName => currentSession != null ? currentSession.name : string.Empty;
         
+        /// <summary>
+        /// The parent GameObject that contains all visualization objects for the replay.
+        /// </summary>
         private GameObject replayParentObject;
 
+        /// <summary>
+        /// Loads a replay session and creates the necessary visualization objects.
+        /// </summary>
+        /// <param name="session">The replay session to load and prepare for playback.</param>
         public void LoadSession(ReplaySession session)
         {
             StopPlayback();
@@ -57,8 +127,14 @@ namespace JL_GameProdEnv_CustomPackage.Runtime
             // Force repaint of scene view to show the visualization updates
             SceneView.RepaintAll();
         }
-
         
+        /// <summary>
+        /// Starts playback of the currently loaded replay session.
+        /// </summary>
+        /// <remarks>
+        /// This method initializes playback from the beginning, subscribes to editor updates,
+        /// and sets the visual objects to their initial positions.
+        /// </remarks>
         public void StartPlayback()
         {
             if (currentSession == null || isPlaying) return;
@@ -77,11 +153,17 @@ namespace JL_GameProdEnv_CustomPackage.Runtime
             Debug.Log($"Started playback of session: {currentSession.name}");
         }
         
+        /// <summary>
+        /// Pauses the current playback without resetting the playback time.
+        /// </summary>
         public void PausePlayback()
         {
             isPlaying = false;
         }
         
+        /// <summary>
+        /// Resumes playback from the current position after being paused.
+        /// </summary>
         public void ResumePlayback()
         {
             if (currentSession == null) return;
@@ -95,6 +177,13 @@ namespace JL_GameProdEnv_CustomPackage.Runtime
             EditorApplication.update += EditorUpdate;
         }
         
+        /// <summary>
+        /// Stops playback and resets the playback time to the beginning.
+        /// </summary>
+        /// <remarks>
+        /// This method unsubscribes from editor updates and resets the visualization
+        /// to the initial frame.
+        /// </remarks>
         public void StopPlayback()
         {
             isPlaying = false;
@@ -109,6 +198,10 @@ namespace JL_GameProdEnv_CustomPackage.Runtime
             }
         }
         
+        /// <summary>
+        /// Sets the playback progress to a specific normalized time.
+        /// </summary>
+        /// <param name="normalizedTime">Normalized time value between 0 and 1.</param>
         public void SetPlaybackProgress(float normalizedTime)
         {
             if (currentSession == null) return;
@@ -118,6 +211,10 @@ namespace JL_GameProdEnv_CustomPackage.Runtime
             UpdateVisualization(playbackTime);
         }
         
+        /// <summary>
+        /// Sets the playback speed multiplier.
+        /// </summary>
+        /// <param name="speed">The speed multiplier, clamped between 0.1 and 3.0.</param>
         public void SetPlaybackSpeed(float speed)
         {
             playbackSpeed = Mathf.Clamp(speed, 0.1f, 3f);
@@ -129,6 +226,9 @@ namespace JL_GameProdEnv_CustomPackage.Runtime
             }
         }
         
+        /// <summary>
+        /// Editor update callback that advances playback time and updates visualizations.
+        /// </summary>
         private void EditorUpdate()
         {
             if (!isPlaying || currentSession == null) return;
@@ -153,6 +253,13 @@ namespace JL_GameProdEnv_CustomPackage.Runtime
             SceneView.RepaintAll();
         }
         
+        /// <summary>
+        /// Updates the position and rotation of all visual objects based on the current playback time.
+        /// </summary>
+        /// <param name="time">The current playback time in seconds.</param>
+        /// <remarks>
+        /// This method handles interpolation between recorded frames to provide smooth playback.
+        /// </remarks>
         private void UpdateVisualization(float time)
         {
             for (int i = 0; i < currentSession.recordedObjects.Count; i++)
@@ -194,6 +301,13 @@ namespace JL_GameProdEnv_CustomPackage.Runtime
             }
         }
         
+        /// <summary>
+        /// Creates visual representation objects for all recorded objects in the current session.
+        /// </summary>
+        /// <remarks>
+        /// This method attempts to clone original objects when available, or creates primitive
+        /// representations as a fallback. It also handles material setup for visualization.
+        /// </remarks>
         private void CreateVisualObjects()
         {
             if (currentSession == null) return;
@@ -318,6 +432,9 @@ namespace JL_GameProdEnv_CustomPackage.Runtime
             }
         }
         
+        /// <summary>
+        /// Removes all visual objects created for replay visualization.
+        /// </summary>
         public void ClearVisualObjects()
         {
             foreach (var obj in visualObjects)
@@ -338,6 +455,10 @@ namespace JL_GameProdEnv_CustomPackage.Runtime
             }
         }
         
+        /// <summary>
+        /// Performs complete cleanup of the replay player, stopping playback,
+        /// removing visual objects, and resetting the singleton instance.
+        /// </summary>
         public void CleanUp()
         {
             StopPlayback();

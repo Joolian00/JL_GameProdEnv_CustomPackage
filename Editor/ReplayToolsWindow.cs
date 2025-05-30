@@ -6,13 +6,32 @@ using JL_GameProdEnv_CustomPackage.Runtime;
 
 namespace JL_GameProdEnv_CustomPackage.Editor
 {
+    /// <summary>
+    /// Custom Unity Editor window for managing gameplay recordings and replays.
+    /// Provides functionality to record, save, and replay physics-based gameplay with
+    /// support for both player and non-player objects.
+    /// </summary>
     public class ReplayToolsWindow : EditorWindow
     {
+        /// <summary>
+        /// List of rigidbodies associated with player-controlled objects.
+        /// These are recorded at a higher frequency for better precision.
+        /// </summary>
         private List<Rigidbody> playerRigidbodies = new List<Rigidbody>();
+        
+        /// <summary>
+        /// List of regular rigidbodies in the scene that are not player-controlled.
+        /// These are recorded at a lower frequency to optimize performance.
+        /// </summary>
         private List<Rigidbody> normalRigidbodies = new List<Rigidbody>();
     
+        /// <summary>Scroll position for the main window content.</summary>
         private Vector2 scrollPos;
+        
+        /// <summary>Scroll position for the saved sessions list.</summary>
         private Vector2 sessionScrollPos;
+        
+        /// <summary>Currently selected rigidbody for detailed information display.</summary>
         private Rigidbody selectedRigidbody;
         
         // Foldout state variables
@@ -22,22 +41,37 @@ namespace JL_GameProdEnv_CustomPackage.Editor
         private bool sessionsFoldout = true;
         private bool replayFoldout = true;
         
-        // Recording UI variables
+        /// <summary>Name to be used when saving the current recording session.</summary>
         private string sessionName = "";
+        
+        /// <summary>Reference to the ReplayRecorder instance that manages recording.</summary>
         private ReplayRecorder recorder;
         
-        // Replay variables
+        /// <summary>Currently selected replay session for playback.</summary>
         private ReplaySession selectedSession;
+        
+        /// <summary>Reference to the ReplayPlayer instance that manages playback.</summary>
         private ReplayPlayer player;
+        
+        /// <summary>Playback speed multiplier (1.0 = normal speed).</summary>
         private float playbackSpeed = 1f;
+        
+        /// <summary>Whether to show the replay control UI elements.</summary>
         private bool showReplayControls = false;
 
+        /// <summary>
+        /// Creates and shows the Replay Tools window.
+        /// </summary>
         [MenuItem("Tools/Replay Tools")]
         public static void ShowWindow()
         {
             GetWindow<ReplayToolsWindow>("Replay Tools");
         }
 
+        /// <summary>
+        /// Called when the window is enabled. Initializes the window by refreshing rigidbody lists,
+        /// subscribing to editor events, and initializing the replay player.
+        /// </summary>
         private void OnEnable()
         {
             RefreshRigidbodyLists();
@@ -49,6 +83,10 @@ namespace JL_GameProdEnv_CustomPackage.Editor
             player = ReplayPlayer.Instance;
         }
 
+        /// <summary>
+        /// Called when the window is disabled. Unsubscribes from editor events
+        /// and stops any active playback.
+        /// </summary>
         private void OnDisable()
         {
             EditorApplication.hierarchyChanged -= RefreshRigidbodyLists;
@@ -62,6 +100,10 @@ namespace JL_GameProdEnv_CustomPackage.Editor
             }
         }
         
+        /// <summary>
+        /// Called when the window is destroyed. Performs final cleanup
+        /// of the replay player instance.
+        /// </summary>
         private void OnDestroy()
         {
             if (player != null)
@@ -70,6 +112,11 @@ namespace JL_GameProdEnv_CustomPackage.Editor
             }
         }
 
+        /// <summary>
+        /// Handles state changes between edit mode and play mode.
+        /// Initializes the recorder when entering play mode and cleans up when exiting.
+        /// </summary>
+        /// <param name="state">The current play mode state.</param>
         private void OnPlayModeStateChanged(PlayModeStateChange state)
         {
             if (state == PlayModeStateChange.EnteredPlayMode)
@@ -85,6 +132,10 @@ namespace JL_GameProdEnv_CustomPackage.Editor
             Repaint();
         }
         
+        /// <summary>
+        /// Called during regular editor updates. Used to repaint the window
+        /// during replay playback to show updated playback progress.
+        /// </summary>
         private void OnEditorUpdate()
         {
             // Repaint for replay playback updates
@@ -94,6 +145,10 @@ namespace JL_GameProdEnv_CustomPackage.Editor
             }
         }
 
+        /// <summary>
+        /// Refreshes the lists of player and non-player rigidbodies in the scene.
+        /// Rigidbodies with a PlayerInput component are classified as player rigidbodies.
+        /// </summary>
         private void RefreshRigidbodyLists()
         {
             playerRigidbodies.Clear();
@@ -114,6 +169,10 @@ namespace JL_GameProdEnv_CustomPackage.Editor
             }
         }
 
+        /// <summary>
+        /// Main GUI method that draws the entire window content.
+        /// Organizes the window into distinct functional sections.
+        /// </summary>
         private void OnGUI()
         {
             GUILayout.Label("Replay Tools", EditorStyles.boldLabel);
@@ -145,6 +204,10 @@ namespace JL_GameProdEnv_CustomPackage.Editor
             DrawSelectedRigidbodyInfo();
         }
 
+        /// <summary>
+        /// Draws the recording controls section of the window.
+        /// Includes recording start/stop buttons, recording status, and save controls.
+        /// </summary>
         private void DrawRecordingSection()
         {
             recordingFoldout = EditorGUILayout.Foldout(recordingFoldout, "Recording Controls", true, EditorStyles.foldoutHeader);
@@ -247,6 +310,10 @@ namespace JL_GameProdEnv_CustomPackage.Editor
             EditorGUI.indentLevel--;
         }
 
+        /// <summary>
+        /// Draws the saved sessions section of the window.
+        /// Displays a list of all saved replay sessions with options to select, delete, or clear all.
+        /// </summary>
         private void DrawSessionsSection()
         {
             sessionsFoldout = EditorGUILayout.Foldout(sessionsFoldout, $"Saved Sessions ({ReplaySessionManager.Instance.SessionCount})", true, EditorStyles.foldoutHeader);
@@ -403,6 +470,11 @@ namespace JL_GameProdEnv_CustomPackage.Editor
             EditorGUI.indentLevel--;
         }
         
+        /// <summary>
+        /// Draws the replay controls section of the window.
+        /// Provides playback controls for the selected replay session including
+        /// play/pause, stop, and playback speed adjustment.
+        /// </summary>
         private void DrawReplaySection()
         {
             replayFoldout = EditorGUILayout.Foldout(replayFoldout, "Replay Controls", true, EditorStyles.foldoutHeader);
@@ -490,6 +562,10 @@ namespace JL_GameProdEnv_CustomPackage.Editor
             EditorGUI.indentLevel--;
         }
 
+        /// <summary>
+        /// Draws the lists of player and normal rigidbodies detected in the scene.
+        /// Allows selection of individual rigidbodies for detailed information.
+        /// </summary>
         private void DrawRigidbodyLists()
         {
             scrollPos = EditorGUILayout.BeginScrollView(scrollPos);
@@ -545,6 +621,10 @@ namespace JL_GameProdEnv_CustomPackage.Editor
             EditorGUILayout.EndScrollView();
         }
 
+        /// <summary>
+        /// Draws detailed information about the currently selected rigidbody.
+        /// Shows properties like name, type, mass, position, and velocity (in play mode).
+        /// </summary>
         private void DrawSelectedRigidbodyInfo()
         {
             if (selectedRigidbody != null)
@@ -564,6 +644,11 @@ namespace JL_GameProdEnv_CustomPackage.Editor
             }
         }
 
+        /// <summary>
+        /// Draws a single rigidbody item in the list with selection toggle and basic information.
+        /// </summary>
+        /// <param name="rb">The rigidbody to display</param>
+        /// <param name="isPlayer">Whether this is a player-controlled rigidbody</param>
         private void DrawRigidbodyItem(Rigidbody rb, bool isPlayer)
         {
             EditorGUILayout.BeginHorizontal();
@@ -609,6 +694,10 @@ namespace JL_GameProdEnv_CustomPackage.Editor
             EditorGUILayout.EndHorizontal();
         }
 
+        /// <summary>
+        /// Called every frame during editor updates. Repaints the window
+        /// when necessary to reflect current recording or playback status.
+        /// </summary>
         private void Update()
         {
             // Repaint the window during play mode to show live recording info

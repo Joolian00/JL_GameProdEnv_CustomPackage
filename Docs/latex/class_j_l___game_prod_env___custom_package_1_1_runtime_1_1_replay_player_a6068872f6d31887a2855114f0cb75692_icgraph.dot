@@ -1,0 +1,20 @@
+digraph "JL_GameProdEnv_CustomPackage.Runtime.ReplayPlayer.EditorUpdate"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="JL_GameProdEnv_CustomPackage.\lRuntime.ReplayPlayer.EditorUpdate",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Editor update callback that advances playback time and updates visualizations."];
+  Node1 -> Node1 [id="edge7_Node000001_Node000001",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node2 [id="edge8_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="JL_GameProdEnv_CustomPackage.\lRuntime.ReplayPlayer.ResumePlayback",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_j_l___game_prod_env___custom_package_1_1_runtime_1_1_replay_player.html#a6230724758b2d36bf7568c1b25877724",tooltip="Resumes playback from the current position after being paused."];
+  Node1 -> Node3 [id="edge9_Node000001_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="JL_GameProdEnv_CustomPackage.\lRuntime.ReplayPlayer.StartPlayback",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_j_l___game_prod_env___custom_package_1_1_runtime_1_1_replay_player.html#ad8c2d65419944906f391d10c724bdfc9",tooltip="Starts playback of the currently loaded replay session."];
+  Node1 -> Node4 [id="edge10_Node000001_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="JL_GameProdEnv_CustomPackage.\lRuntime.ReplayPlayer.StopPlayback",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_j_l___game_prod_env___custom_package_1_1_runtime_1_1_replay_player.html#ac68541951439bebc4617c94ef7827979",tooltip="Stops playback and resets the playback time to the beginning."];
+  Node4 -> Node5 [id="edge11_Node000004_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="JL_GameProdEnv_CustomPackage.\lRuntime.ReplayPlayer.CleanUp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_j_l___game_prod_env___custom_package_1_1_runtime_1_1_replay_player.html#a08fde0b50bc1b88cb36c0b849915f757",tooltip="Performs complete cleanup of the replay player, stopping playback, removing visual objects,..."];
+  Node4 -> Node6 [id="edge12_Node000004_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="JL_GameProdEnv_CustomPackage.\lRuntime.ReplayPlayer.LoadSession",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_j_l___game_prod_env___custom_package_1_1_runtime_1_1_replay_player.html#a8a06e1ee70db22ff6760708c282b054c",tooltip="Loads a replay session and creates the necessary visualization objects."];
+}
