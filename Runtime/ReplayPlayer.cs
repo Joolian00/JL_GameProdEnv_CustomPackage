@@ -42,12 +42,20 @@ namespace JL_GameProdEnv_CustomPackage.Runtime
         {
             StopPlayback();
             ClearVisualObjects();
-            
+    
             currentSession = session;
             CreateVisualObjects();
-            
+    
             Debug.Log($"Loaded replay session: {session.name} with {session.recordedObjects.Count} objects");
+    
+            // Immediately update visualization to show frame 0
+            playbackTime = 0f;
+            UpdateVisualization(0f);
+    
+            // Force repaint of scene view to show the visualization updates
+            SceneView.RepaintAll();
         }
+
         
         public void StartPlayback()
         {
