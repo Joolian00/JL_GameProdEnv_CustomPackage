@@ -8,7 +8,6 @@ Provides an editor window for easy recording management and visualization of rep
 
 ## Documentation
 
-[Documentation](./api.md)
 [Documentation](./docs/html/index.html)
 
 
