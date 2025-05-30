@@ -10,5 +10,5 @@ var searchData=
   ['currentrecordingdata_7',['currentRecordingData',['../class_j_l___game_prod_env___custom_package_1_1_runtime_1_1_replay_recorder.html#a3258944ba1015113d66644b1322a6359',1,'JL_GameProdEnv_CustomPackage::Runtime::ReplayRecorder']]],
   ['currentsession_8',['currentSession',['../class_j_l___game_prod_env___custom_package_1_1_runtime_1_1_replay_player.html#a93e94868e945ad2d149f8702c796da68',1,'JL_GameProdEnv_CustomPackage::Runtime::ReplayPlayer']]],
   ['currentsessionname_9',['CurrentSessionName',['../class_j_l___game_prod_env___custom_package_1_1_runtime_1_1_replay_player.html#aec1ea3af8577ed604eff70ecadbd9a36',1,'JL_GameProdEnv_CustomPackage::Runtime::ReplayPlayer']]],
-  ['custom_20replay_20tool_20for_20unity_20github_10',['Custom Replay Tool for Unity - &lt;a href=&quot;https://joolian00.github.io/JL_GameProdEnv_CustomPackage/&quot;&gt;GitHub&lt;/a&gt;',['../index.html',1,'']]]
+  ['custom_20replay_20tool_20for_20unity_10',['Custom Replay Tool for Unity',['../index.html',1,'']]]
 ];

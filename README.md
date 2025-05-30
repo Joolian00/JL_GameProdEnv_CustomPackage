@@ -1,4 +1,4 @@
-# Custom Replay Tool for Unity - [GitHub](https://joolian00.github.io/JL_GameProdEnv_CustomPackage/)
+# Custom Replay Tool for Unity
 A Unity package for recording, saving, and replaying physics-based gameplay.
 
 Records Rigidbody transformations at configurable frequencies, with higher precision for player objects. (Though I think this is currently bugged)
@@ -8,6 +8,8 @@ Provides an editor window for easy recording management and visualization of rep
 
 ## Documentation
 
+[GitHub](https://github.com/Joolian00/JL_GameProdEnv_CustomPackage)
+[GitHub Pages](https://joolian00.github.io/JL_GameProdEnv_CustomPackage/)
 [Doxygen Documentation](./docs/html/index.html)
 
 ## Key Components
