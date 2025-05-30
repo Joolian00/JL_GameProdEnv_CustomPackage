@@ -25,7 +25,7 @@
 var NAVTREE =
 [
   [ "JL Game Production Environment Package", "index.html", [
-    [ "Custom Replay Tool for Unity", "index.html", "index" ],
+    [ "Custom Replay Tool for Unity - <a href=\"https://joolian00.github.io/JL_GameProdEnv_CustomPackage/\">GitHub</a>", "index.html", "index" ],
     [ "Packages", "namespaces.html", [
       [ "Package List", "namespaces.html", "namespaces_dup" ]
     ] ],

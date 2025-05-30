@@ -12,7 +12,7 @@ var searchData=
   ['recordingstarttime_9',['recordingStartTime',['../class_j_l___game_prod_env___custom_package_1_1_runtime_1_1_replay_recorder.html#a061db777980642d36a84598fbd687006',1,'JL_GameProdEnv_CustomPackage::Runtime::ReplayRecorder']]],
   ['refreshrigidbodylists_10',['RefreshRigidbodyLists',['../class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window.html#a54b19e3ade0fba6c2cdf33d610c956c7',1,'JL_GameProdEnv_CustomPackage::Editor::ReplayToolsWindow']]],
   ['removesession_11',['RemoveSession',['../class_j_l___game_prod_env___custom_package_1_1_runtime_1_1_replay_session_manager.html#a1f2503c2009257530be0f92142b34ddb',1,'JL_GameProdEnv_CustomPackage::Runtime::ReplaySessionManager']]],
-  ['replay_20tool_20for_20unity_12',['Custom Replay Tool for Unity',['../index.html',1,'']]],
+  ['replay_20tool_20for_20unity_20github_12',['Custom Replay Tool for Unity - &lt;a href=&quot;https://joolian00.github.io/JL_GameProdEnv_CustomPackage/&quot;&gt;GitHub&lt;/a&gt;',['../index.html',1,'']]],
   ['replayfoldout_13',['replayFoldout',['../class_j_l___game_prod_env___custom_package_1_1_editor_1_1_replay_tools_window.html#a2e591369c134db2c36be6438e0aa134a',1,'JL_GameProdEnv_CustomPackage::Editor::ReplayToolsWindow']]],
   ['replayparentobject_14',['replayParentObject',['../class_j_l___game_prod_env___custom_package_1_1_runtime_1_1_replay_player.html#aea3518bfd852265475a28869abc19dc7',1,'JL_GameProdEnv_CustomPackage::Runtime::ReplayPlayer']]],
   ['replayplayer_15',['ReplayPlayer',['../class_j_l___game_prod_env___custom_package_1_1_runtime_1_1_replay_player.html',1,'JL_GameProdEnv_CustomPackage::Runtime']]],
