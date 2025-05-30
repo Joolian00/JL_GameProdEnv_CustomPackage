@@ -1,0 +1,23 @@
+{
+    "name": "fhs.JL_GameProdEnv",
+    "rootNamespace": "",
+    "references": [
+        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:cc22b1ebd8b7e544399d1e67e627c7e8"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.inputsystem",
+            "expression": "1.13.1",
+            "define": "USE_NEW_INPUT_SYSTEM"
+        }
+    ],
+    "noEngineReferences": false
+}

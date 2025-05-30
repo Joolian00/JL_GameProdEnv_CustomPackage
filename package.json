@@ -2,7 +2,7 @@
     "name": "com.mmp2b.jl_gameprodenv_custompackage",
     "version": "1.0.0",
     "displayName": "JL_GameProdEnv_CustomPackage",
-    "description": "Custom Package for JL GameProdEnv including a 3D Rigidbody Controller",
+    "description": "Custom Package for JL GameProdEnv including a replay feature for rigidbodies.",
     "unity": "6000.0",
     "author": {
         "name": "Julian Leidolt",
