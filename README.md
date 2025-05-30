@@ -8,9 +8,9 @@ Provides an editor window for easy recording management and visualization of rep
 
 ## Documentation
 
-[GitHub](https://github.com/Joolian00/JL_GameProdEnv_CustomPackage)
-[GitHub Pages](https://joolian00.github.io/JL_GameProdEnv_CustomPackage/)
-[Doxygen Documentation](./docs/html/index.html)
+- [GitHub](https://github.com/Joolian00/JL_GameProdEnv_CustomPackage)
+- [GitHub Pages](https://joolian00.github.io/JL_GameProdEnv_CustomPackage/)
+- [Doxygen Documentation](./docs/html/index.html)
 
 ## Key Components
 
