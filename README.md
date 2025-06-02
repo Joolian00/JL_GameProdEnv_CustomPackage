@@ -31,4 +31,7 @@ Unity Package Manager: Click on the plus → Add from Custom Git Url
 ```
 https://github.com/Joolian00/JL_GameProdEnv_CustomPackage.git
 ```
+
+### Coming Soon
+Instead of being a package focused only on a replay tool, this will be a collection of several custom packages! E.g. a custom map generator made by Kilian Lehmeier. 
     
