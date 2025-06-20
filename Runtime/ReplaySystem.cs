@@ -82,6 +82,18 @@ namespace JL_GameProdEnv_CustomPackage.Runtime
         /// and angular velocity during runtime.
         /// </summary>
         public Rigidbody rigidbody; // Runtime reference
+        
+        // Track previous transform values to avoid recording duplicates
+        private Vector3 lastPosition;
+        private Quaternion lastRotation;
+        private Vector3 lastVelocity;
+        private Vector3 lastAngularVelocity;
+        private bool hasRecordedFrame = false;
+        
+        // Threshold for position change detection (to account for floating point precision)
+        private const float PositionThreshold = 0.01f;
+        private const float RotationThreshold = 0.01f;
+        private const float VelocityThreshold = 0.01f;
 
         /// Represents recording data for a Rigidbody, including its state over time during a replay session.
         public RigidbodyRecordingData(Rigidbody rb, bool playerType)
@@ -90,28 +102,79 @@ namespace JL_GameProdEnv_CustomPackage.Runtime
             isPlayer = playerType;
             rigidbody = rb;
             recordedFrames = new List<TransformData>();
+            
+            // Initialize last values
+            if (rb != null)
+            {
+                lastPosition = rb.transform.position;
+                lastRotation = rb.transform.rotation;
+                lastVelocity = rb.linearVelocity;
+                lastAngularVelocity = rb.angularVelocity;
+            }
         }
 
         /// <summary>
-        /// Adds a frame containing the current transform and physics data to the recording.
+        /// Adds a frame containing the current transform and physics data to the recording
+        /// only if there's a meaningful change since the last recorded frame.
         /// </summary>
         /// <param name="currentTime">The current time at which the frame is being recorded.</param>
-        /// <returns>None. Adds a frame to the recordedFrames list if the Rigidbody is not null.</returns>
         public void AddFrame(float currentTime)
         {
-            if (rigidbody != null)
-            {
-                recordedFrames.Add(new TransformData(rigidbody.transform, rigidbody, currentTime));
-            }
+            if (!rigidbody) return;
+            
+            Vector3 currentPosition = rigidbody.transform.position;
+            Quaternion currentRotation = rigidbody.transform.rotation;
+            Vector3 currentVelocity = rigidbody.linearVelocity;
+            Vector3 currentAngularVelocity = rigidbody.angularVelocity;
+            
+            // Always record the first frame or if there's a significant change
+            bool shouldRecord = !hasRecordedFrame || HasSignificantChange(
+                currentPosition, 
+                currentRotation, 
+                currentVelocity, 
+                currentAngularVelocity
+            );
+            
+            if (!shouldRecord) return;
+            
+            recordedFrames.Add(new TransformData(rigidbody.transform, rigidbody, currentTime));
+            
+            // Update tracking variables
+            lastPosition = currentPosition;
+            lastRotation = currentRotation;
+            lastVelocity = currentVelocity;
+            lastAngularVelocity = currentAngularVelocity;
+            hasRecordedFrame = true;
+        }
+        
+        /// <summary>
+        /// Determines if the current transform state differs significantly from the previously recorded state.
+        /// </summary>
+        /// <returns>True if any property exceeds its change threshold, false otherwise.</returns>
+        private bool HasSignificantChange(Vector3 position, Quaternion rotation, Vector3 velocity, Vector3 angularVelocity)
+        {
+            if (Vector3.Distance(position, lastPosition) > PositionThreshold)
+                return true;
+                
+            if (Quaternion.Angle(rotation, lastRotation) > RotationThreshold)
+                return true;
+                
+            if (Vector3.Distance(velocity, lastVelocity) > VelocityThreshold)
+                return true;
+                
+            if (Vector3.Distance(angularVelocity, lastAngularVelocity) > VelocityThreshold)
+                return true;
+                
+            return false;
         }
 
         /// <summary>
         /// Clears all recorded frames from the current object.
         /// </summary>
-        /// <returns>None.</returns>
         public void ClearFrames()
         {
             recordedFrames.Clear();
+            hasRecordedFrame = false;
         }
     }
 
